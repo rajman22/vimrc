@@ -33,6 +33,9 @@ set ttymouse=xterm2
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+let g:xml_syntax_folding=1
+au FileType xml setlocal foldmethod=syntax
+
 
 :au! CursorHoldI,CursorHold,BufLeave <buffer> silent! :update
 
